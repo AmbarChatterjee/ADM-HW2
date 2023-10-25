@@ -1,0 +1,2 @@
+#!/bin/bash
+(echo "id|title|total_books_count"; cat series.json | jq -s -r '.[] | {id: .id, title: .title, total_books_count: [(.works[] | .books_count | tonumber)] | add} | [.id, .title, .total_books_count] | join("|")' | sort -t "|" -k3 -nr | head -n 5) | column -t -s "|"

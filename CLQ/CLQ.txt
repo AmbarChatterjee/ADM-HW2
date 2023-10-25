@@ -1,0 +1,10 @@
+In my solution, I employed the LLM Chatbot tools in the following ways:
+
+1. I used jq to extract specific fields from the JSON objects (id, title, total_books_count), calculate the total books count, and format the output.
+2. After extracting and formatting the data, I used the sort command to order the series by the total books count in descending order, then used the head command to get the top 5 series.
+3. Finally, I used the column command to neatly format the output into a table.
+
+Validating Its Correctness:
+
+1. Verified the output with the expected result.
+2. Took a few series from the output and manually calculated their total book count from the original JSON file.
