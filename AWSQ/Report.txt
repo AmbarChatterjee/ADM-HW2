@@ -1,0 +1,108 @@
+Amazon Elastic Compute Cloud (EC2) instance configuration details are as follows:
+
+**Instance Information:**
+
+- Instance ID: `i-0c543bcaff66c6b2f`
+- Instance State: Running
+- Instance Type: `t3.large`
+- Lifecycle: Normal
+- Number of vCPUs: 2
+- Virtualization Type: `hvm`
+- Tenancy: Default
+
+**Network Information:**
+
+- Public IPv4 Address: `54.196.247.113`
+- Private IPv4 Address: `172.31.22.28`
+- Public DNS: `ec2-54-196.247.113.compute-1.amazonaws.com`
+- Private DNS: `ip-172-31-22-28.ec2.internal`
+- VPC ID: `vpc-04d455d2af1048c47`
+- Subnet ID: `subnet-07475a375c3312750`
+- Availability Zone: `us-east-1c`
+
+**Security Information:**
+
+- Security Group ID: `sg-03ff7b49f676cee12`
+- Inbound Rules: 2 rules (Port 22 TCP from `0.0.0.0/0` and Port 8088 TCP from `0.0.0.0/0`)
+- Outbound Rules: 1 rule (All Ports All Protocols to `0.0.0.0/0`)
+
+**Platform and Software Information:**
+
+- Platform: Ubuntu (Inferred)
+- AMI ID: `ami-053b0d53c279acc90`
+- AMI Name: `ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-20230516`
+- Kernel ID: Not Available
+
+**Storage Information:**
+
+- Root Device Name: `/dev/sda1`
+- Root Device Type: EBS
+- EBS Optimization: Enabled
+- Volume ID: `vol-09ee9a5497198c3e2`
+- Volume Size: 30 GiB
+- Encrypted: No
+- Delete on Termination: Yes
+
+**Miscellaneous Information:**
+
+- IAM Role: Not Available
+- Key Pair Assigned at Launch: `mykey1`
+- Instance owner: `185991324129`
+- Launch Time: Fri Oct 27 2023 22:59:52 GMT+0200 (Central European Summer Time)
+- Monitoring: Disabled
+- Termination Protection: Disabled
+- Stop Protection: Disabled
+- Auto Scaling Group Name: Not Available
+
+----------------------------------------------------------------------------------------------
+
+Command used to connect to the EC2:
+
+# Connect to the remote server using SSH with the specified key and username
+ssh -i "mykey1.pem" ubuntu@ec2-54-196-247-113.compute-1.amazonaws.com
+
+----------------------------------------------------------------------------------------------
+
+Commands used to upload the files and run the script on the EC2 instance through our local system:
+
+# Copy the directory "AWSQ" recursively to the remote server using SCP with the specified key and username
+scp -i "mykey1.pem" -r AWSQ ubuntu@ec2-54-196-247-113.compute-1.amazonaws.com:
+
+# Change directory to "AWSQ"
+cd AWSQ
+
+# List the files and directories in the current directory
+ls
+
+# List all files and directories in the current directory, including hidden files
+ls -la
+
+# Change the permissions of the file "AWSQ.py" to make it executable
+chmod +x AWSQ.py
+
+# List all files and directories in the current directory, including hidden files, with detailed permissions
+ls -la
+
+# Run the Python script "AWSQ.py"
+python3 AWSQ.py
+
+--------------------------------------------------------------------------------------------
+
+Table containing the most popular tags and their number of usage:
+
+| Tag             | #Usage |
+|-----------------|--------|
+| Romance         | 6001   |
+| Fiction         | 5291   |
+| Young-Adult     | 5016   |
+| Fantasy         | 3666   |
+| Science-Fiction | 2779   |
+
+---------------------------------------------------------------------------------------------
+
+Table containing the running time of the script on our local system and EC2 instance:
+
+| System           | Time Taken (seconds) |
+|------------------|----------------------|
+| Local System     | 0.17875933647155762  |
+| EC2 Instance     | 0.32653093338012695  |
