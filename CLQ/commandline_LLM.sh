@@ -1,0 +1,2 @@
+#!/bin/bash
+(echo -e "id|title|total_books_count"; jq -s -r '[.[] | {id, title, total_books_count: [ .works[] | .books_count | tonumber ] | add}] | sort_by(.total_books_count) | reverse | .[0:5] | .[] | "\(.id)|\(.title)|\(.total_books_count)"' series.json) | column -t -s "|"
