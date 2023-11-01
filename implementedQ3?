@@ -1,0 +1,14 @@
+numbers = []
+
+n = int(input())
+
+for _ in range(n):
+    order = input().split()
+
+    if order[0] == "L":
+        numbers.insert(0, order[1])
+    elif order[0] == "R":
+        numbers.append(order[1])
+    else:
+        index = numbers.index(value)
+        print(min(index, len(numbers) - 1 - index))
