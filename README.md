@@ -8,5 +8,5 @@
 ## Authors
 - [@Ambar Chatterjee](https://github.com/AmbarChatterjee])
 - [@Susanna Bravi](https://github.com/susannabravi)
-- [@Stefano](https://github.com/Stinoo01)
+- [@Stefano Rinaldi](https://github.com/Stinoo01)
 - [@Arash Bakhshaee Babaroud](https://github.com/ArashB1230)
