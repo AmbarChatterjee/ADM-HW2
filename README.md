@@ -14,7 +14,7 @@
 * `README.md`
 
 ## Authors
-- [@Ambar Chatterjee](https://github.com/AmbarChatterjee])
+- [@Ambar Chatterjee](https://github.com/AmbarChatterjee)
 - [@Susanna Bravi](https://github.com/susannabravi)
 - [@Stefano Rinaldi](https://github.com/Stinoo01)
 - [@Arash Bakhshaee Babaroud](https://github.com/ArashB1230)
